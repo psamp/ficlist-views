@@ -12,13 +12,27 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "\n    <li class=\"singleContact\" data-id=\""
+    + this.escapeExpression(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\">\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.photoUrl : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.program(4, data, 0),"data":data})) != null ? stack1 : "")
+    + "  \n";
+},"2":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "\n  <li class=\"singleContact\" data-id=\""
+  return "\n      <a href=\"#contact/"
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.photoUrl || (depth0 != null ? depth0.photoUrl : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"photoUrl","hash":{},"data":data}) : helper)))
-    + "\"></p></li>\n  \n";
+    + "\"></p>\n\n";
+},"4":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "\n      <a href=\"#contact/"
+    + this.escapeExpression(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\"><img src=\"assets/nophoto.png\"></p></a>\n\n    </li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

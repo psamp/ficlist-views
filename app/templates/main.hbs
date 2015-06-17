@@ -25,7 +25,19 @@
   
   {{#each contact}}
 
-  <li class="singleContact" data-id="{{ _id }}"><img src="{{ photoUrl }}"></p></li>
+    <li class="singleContact" data-id="{{ _id }}">
+
+    {{#if photoUrl}}
+
+      <a href="#contact/{{ _id }}"><img src="{{ photoUrl }}"></p>{{!-- </a> --}}
+
+      {{else}}
+
+      <a href="#contact/{{ _id }}"><img src="assets/nophoto.png"></p></a>
+
+    </li>
+
+    {{/if}}
   
   {{/each}}
 </ul>
