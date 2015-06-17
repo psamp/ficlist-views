@@ -1,12 +1,192 @@
-// IMPORTS
+// import neat + bourbon
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import "app/css/vendor/font-awesome.css";
-// END
+// end
 
-// VARIBLES + MIXINS
+/// variables
+$oh: hidden;
+$font: 'Open Sans', sans-serif;
+$font2: 'Oswald', sans-serif;
 
-// END
+// color pallate
+
+$dt: RGB(1, 162, 166);
+$lt: RGB(41, 217, 194);
+$wh: white;
+
+// end
+
+// mixins
+//
+// end
+
+* {
+  outline:none;
+  font-family: $font;
+  font-weight:300;
+}
+
+// container
+.container {
+  // overflow:$oh;
+  margin:0 auto;
+  @include outer-container(100%);
+}
+// end
+
+
+// sidebar
+.sidebar {
+  font-weight:300;
+  @include size(20% 1);
+  position:fixed;
+  top:0;
+  bottom:0;
+  background-color:$lt;
+  clear:both;
+  display:inline-block;
+  border-right:1px solid $lt;
+
+  .pageTitle h1 {
+    font-size:60px;
+    color:$wh;
+    width:100%;
+    font-family:$font2;
+    text-transform: uppercase;
+    text-align:center;
+  }
+  .subtitle {
+    text-align:center;
+    font-weight:300;
+    color: white;
+    font-size:10px;
+    border-bottom:1px solid $wh;
+    padding-bottom:10px;
+     a {
+      color:white;
+      text-decoration: none;
+     }
+  }
+
+  .title {
+  font-size:20px;
+  color:$wh;
+  width:100%;
+
+    h1 {
+      font-family:$font2;
+      text-transform: uppercase;
+    }
+  }
+
+  .subtitle {
+    text-align:center;
+    font-weight:300;
+    color: white;
+    font-size:10px;
+     a {
+      color:white;
+      text-decoration: none;
+     }
+  }
+  
+
+  input {
+    width:100%;
+    text-align:center;
+    border:0;
+    border-bottom:1px $lt solid;
+    height:20px;
+    font-size:.8em;
+    padding:20px;
+  }
+
+  form {
+
+    .contactBio {
+      height:75px;
+    }
+
+    .submitContact {
+      width:100%;
+      border:0;
+      padding:10px;
+      color:$wh;
+      font-size:25px;
+      background-color:transparent;
+    }
+  }
+}
+// end sidebar
+
+// contact list
+
+.contactList {
+  float:right;
+  width:80%;
+  margin:0;
+  margin-left:0 auto;
+  margin-right:0 auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  list-style:none;
+  margin-right:0 auto;
+  margin-right:0 auto;
+
+  li {
+    // old grid settings
+    // @include span-columns(4);
+    // @include omega(4n);
+    // @include size(200px);
+    // height:150px;
+    margin:30px;
+    width:60%;
+    padding:10px;
+    font-size:14px;
+    font-style:italic;
+    border:0px;
+    border-radius:10px;
+    color:$dt;
+    color:$wh;  
+    &:nth-child(odd) {
+      background-color:$dt; 
+    }
+
+    &:nth-child(even) {
+      background-color:$lt; 
+    }
+
+    h1 {
+      font-family:$font2;
+      text-transform:uppercase;
+      font-size:15px;
+      font-style: normal;
+      padding-bottom:10px;
+      border-bottom:1px $wh solid;
+      .fa-remove {
+        color:white;
+        opacity:.5;
+
+        &:hover {
+          color:red;
+          cursor:pointer;
+          transition: 1s all ease;
+          opacity:1;
+        }
+      }
+    }
+  }
+
+  .fa {
+    color:$wh;
+    font-style: normal;
+    font-size:14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:10px;
+    font-weight:bold;
+  }
+}
 
 // NAV
 // END
@@ -21,4 +201,3 @@
 
 // OTHER
 // END
-

@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>Ficlist v2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- normalize/foundation -->
+  
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <!-- <link rel="stylesheet" href="css/vendor/foundation.css">  -->
+  
+  <!-- fonts -->
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
+
+   <!-- my css -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
   <div class="container">
-
+  <!-- hbs imports are coming -->
   </div>
 
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/underscore.js"></script>
   <script src="js/vendor/handlebars.js"></script>
+  <script src="js/vendor/backbone.js"></script>
+  
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
+
+  <!-- SETUP -->
+
+  <script src="js/setup.js"></script>
+
+  <!-- MODELS -->
+  <script src="js/models/contact.model.js"></script>
+
+  <!-- COLLECTIONS -->
+  <script src="js/collections/contacts.collection.js"></script>
+
+  <!-- VIEWS -->
+  <script src="js/views/main.view.js"></script>
+  <script src="js/views/about.view.js"></script>
+  <script src="js/views/single.view.js"></script>
+
+  <!-- ROUTES -->
+
+  <script src="js/routers/main.router.js"></script>
+
   <!-- MAIN -->
   <script src="js/main.js"></script>
 
