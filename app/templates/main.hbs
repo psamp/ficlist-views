@@ -4,20 +4,28 @@
 
   <div class="pageTitle"><h1>ficlist</h1></div>
 
-    <div class="contactCreateForm">
+<div class="contactCreateForm">
 
 
-      <form class="newContact" id="newContact">
+  <form class="newContact" id="newContact">
 
-        <input class="contactName" id= "contactName" type="text" placeholder="name">
+    <input class="contactName" id= "contactName" type="text" placeholder="name">
 
-        <input class="contactBio" id="contactBio" type="text" placeholder="bio">
+    <input class="contactBio" id="contactBio" type="text" placeholder="bio">
 
-        <input id="photo" type="text" placeholder="direct, full photo url">
+    <input id="contactPhotoUrl" type="text" placeholder="direct, full photo url">
 
-        <button class="submitContact"><i class="fa fa-plus-square"></i></button>
+    <button class="submitContact"><i class="fa fa-plus-square"></i></button>
+  </form>
+</div>
 
-      </form>
+</div>
 
+<ul class="contactList">
+  
+  {{#each contact}}
 
-    </div>
+  <li class="singleContact" data-id="{{ _id }}"><img src="{{ photoUrl }}"></p></li>
+  
+  {{/each}}
+</ul>

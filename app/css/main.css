@@ -63,7 +63,7 @@ html {
     .sidebar .subtitle a {
       color: white;
       text-decoration: none; }
-  .sidebar input {
+  .sidebar form input {
     width: 100%;
     text-align: center;
     border: 0;
@@ -92,31 +92,41 @@ html {
   list-style: none;
   margin-right: 0 auto;
   margin-right: 0 auto; }
-  .contactList li {
-    margin: 30px;
-    width: 60%;
-    padding: 10px;
-    font-size: 14px;
-    font-style: italic;
-    border: 0px;
-    border-radius: 10px;
-    color: RGB(1, 162, 166);
-    color: white; }
-    .contactList li:nth-child(odd) {
+  .contactList .singleContact {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    height: 200px;
+    width: 200px; }
+    .contactList .singleContact:last-child {
+      margin-right: 0; }
+    .contactList .singleContact:nth-child(4n) {
+      margin-right: 0; }
+    .contactList .singleContact:nth-child(4n+1) {
+      clear: left; }
+    .contactList .singleContact:nth-child(odd) {
       background-color: RGB(1, 162, 166); }
-    .contactList li:nth-child(even) {
+    .contactList .singleContact:nth-child(even) {
       background-color: RGB(41, 217, 194); }
-    .contactList li h1 {
+    .contactList .singleContact img {
+      opacity: .4;
+      height: 200px;
+      width: 200px; }
+      .contactList .singleContact img:hover {
+        opacity: 1;
+        transition: 1s all ease; }
+    .contactList .singleContact h1 {
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
       font-size: 15px;
       font-style: normal;
       padding-bottom: 10px;
       border-bottom: 1px white solid; }
-      .contactList li h1 .fa-remove {
+      .contactList .singleContact h1 .fa-remove {
         color: white;
         opacity: .5; }
-        .contactList li h1 .fa-remove:hover {
+        .contactList .singleContact h1 .fa-remove:hover {
           color: red;
           cursor: pointer;
           transition: 1s all ease;

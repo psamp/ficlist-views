@@ -15,7 +15,7 @@ app.Models.Contact = Backbone.Model.extend ({
   defaults: {
     name:'',
     bio: '',
-    photo: '',
+    photoUrl: '',
   },
 
   // log info function referenced on init

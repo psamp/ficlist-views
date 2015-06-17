@@ -41,13 +41,13 @@
       var self = this,
           form = $(event.target),
           name = form.find('#contactName').val(),
-          bio = form.find('#contactBiography').val(),
-          photo = form.find('#contactPhoto').val();
+          bio = form.find('#contactBio').val(),
+          photoUrl = form.find('#contactPhotoUrl').val();
 
       var c = new app.Models.Contact({
         name: name,
         bio: bio,
-        photo: photo
+        photoUrl: photoUrl
       });
 
       this.collection.add(c).save().success( function () {
