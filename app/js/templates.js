@@ -22,17 +22,17 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"2":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "\n      <a href=\"#contact/"
+  return "\n      <a href=\"/#/contact/"
     + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.photoUrl || (depth0 != null ? depth0.photoUrl : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"photoUrl","hash":{},"data":data}) : helper)))
-    + "\"></p>\n\n";
+    + "\"></a>\n\n";
 },"4":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "\n      <a href=\"#contact/"
+  return "\n      <a href=\"/#/contact/"
     + this.escapeExpression(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
-    + "\"><img src=\"assets/nophoto.png\"></p></a>\n\n    </li>\n\n";
+    + "\"><img src=\"assets/nophoto.png\"></a>\n\n    </li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -42,5 +42,13 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<nav>\n\n  <div class=\"navRight\"><h2> <a href=\"/#\">home</a> + <a href=\"/#about\">about</a> </h2></div>\n\n  <div class=\"navLeft\"><h1>ficlist</h1></div>\n\n</nav>\n\n<li class=\"singleContact\" data-id=\""
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\">\n  \n  <p class=\"contactFullName\">\n  <h1>"
+    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + " <i class=\"fa fa-remove\" id=\"deleteContact\"></i></h1>\n  </p>\n\n  <p class=\"bio\">"
+    + alias3(((helper = (helper = helpers.bio || (depth0 != null ? depth0.bio : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"bio","hash":{},"data":data}) : helper)))
+    + "</p>\n\n</li>";
 },"useData":true});

@@ -18,28 +18,32 @@
       var args = options || {};
       this.singleId = args.singleId;
       this.collection = args.collection;
-
+      console.log(this.collection);
       this.render();
 
       $('.container').html(this.el);
     },
 
-    render: {
-      var singleContact = this.collection.get(this.singleId);
-      this.$el(this.template(singleContact.toJSON()));
+    render: function () {
+      var singleContact = this.collection.fetch(this.singleId);
+
+      this.$el.html(this.template(singleContact));
     },
 
-    deleteContact: {
-      var button = $(event.target),
-          modelId = $(button).data('id'),
-          whichContact = this.collection.get(modelID);
-
-    whichContact.destroy().success( function () {
+    deleteContact: function (e) {
       
-      // let me know it's destroyed
+      e.preventDefault;
 
-      console.log('ITEM DELETED');
-    });
+      var button = $(event.target);
+      var modelId = $(button).data('id');
+      var whichContact = this.collection.get(modelId);
+
+      whichContact.destroy().success( function () {
+        
+        // let me know it's destroyed
+
+        console.log('ITEM DELETED');
+      });
     
     }
 

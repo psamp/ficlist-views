@@ -19,17 +19,17 @@
       'contact/:id' : 'singleContact',
       'about' : 'aboutPage'
     },
-
+  
     // these are the functions referenced above. each one creates a new instance of a specific view.
-
-    aboutPage: function () {
-      new app.Views.AboutView();
-    },
 
     homePage: function () {
       new app.Views.Main({
         collection: this.collection
       });
+    },
+
+    aboutPage: function () {
+      new app.Views.AboutView();
     },
 
     singleContact: function (id) {
